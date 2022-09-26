@@ -1,0 +1,93 @@
+<html>
+    <title>Cookies?</title>
+    <style>
+        #CookieButtonYes
+        {
+            font-size: 24px;
+            background-color:aqua;
+            border-style: hidden;
+            padding: 30px 64px;
+            text-align: center;
+            display: inline-block;
+        }
+        #CookieButton
+        {
+            margin-left: 600px;
+            font-size: 24px;
+            background-color:rgb(102, 102, 102);
+            border-style: hidden;
+            padding: 30px 64px;
+            text-align: center;
+            display: inline-block;
+        }
+        #rickRoll
+        {
+            pointer-events: none;
+        }
+        .buttons
+        {
+            margin: 10;
+            position: absolute;
+            top: 40%;
+            transform: translate(45%, 50%);
+        }
+        h1
+        {
+            font-family: Arial;
+            font-size: 24px;
+            color:rgb(0, 174, 255);
+            text-align: center;
+        }
+        h2
+        {
+            font-family: Arial;
+            font-size: 24px;
+            color:rgb(0, 174, 255); 
+        }
+        p
+        {
+            font-family: Arial;
+            font-size: 24px;
+        }
+        a
+        {
+            font-family: Arial;
+            font-size: 24px;
+        }
+    </style>
+    <script>
+        window.onload = function load()
+        {
+            var vid = document.getElementById("rickRoll");
+            vid.style.visibility = 'hidden';
+        }
+        function start()
+        {
+            var vid = document.getElementById("rickRoll");
+            vid.style.visibility = 'visible';
+            vid.requestFullscreen();
+            vid.play();
+        }
+    </script>
+    <body>
+        <h1>Do you want some cookies??</h1>
+        <h2>What are cookies and what are the diffrences betwen cookies and buscuits</h2>
+        <p>Here are the main differences between the two…
+            The Texture & Technique
+            The first difference between English biscuits and cookies is the way they are made. The word “cookie” originates from the Dutch word ‘Koekje’ meaning ‘little cake’. These little cakes were originally made to test the temperature of an oven before baking a real cake!
+            Much like cake, cookies are made from a soft, thick dough and are denser than an English biscuit. When they are finished, cookies are larger, softer, and chunkier than their biscuit cousins.
+            In contrast, the word “biscuit” comes from the Latin ‘bis’ (twice) and ‘coquere’ (cooked). It essentially means twice baked! More firm, thinner and fluffier than a cookie, biscuits require a harder dough to create the correct texture.
+            These deliciously crumbly treats are usually made with only a few ingredients, butter, flour and sugar. This makes them the perfect dippable treat, as they absorb the rich flavours in coffee and tea!
+        </p>
+        <a href = "https://waterbridge.net/blogs/news/english-biscuits-vs-cookies-whats-the-difference">source of the defention above is here(i dont want to get copyright striked)</a>
+        <h1>So now I ask you the same question again: Do you want some cookies??</h1>
+        <div class = "buttons">
+            <input id = "CookieButtonYes" type = "button" onclick = "start()" value = "Sure"></input>
+            <input id = "CookieButton" type = "button" onclick = "start()" value = "No thanks"></input>
+        </div>
+        <video id = "rickRoll" width = "0" height = "0">
+            <source src="rick-roll.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </body>
+</html>
