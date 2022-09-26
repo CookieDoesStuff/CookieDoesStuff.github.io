@@ -1,0 +1,43 @@
+@font-face {
+    font-family: consolas;
+    src: url(consolas.ttf);
+}
+body
+{
+    background-color:darkslategray;
+}
+.cmd
+{
+    width: 800px;
+    height: 600px;
+    background-color: black;
+}
+#cmdTextInput
+{
+    font-family: consolas;
+    margin-top: 24px;
+    margin-left: 24px;
+    font-size: 24px;
+    color: green;
+    background-color: black;
+}
+#cmdText
+{
+    font-family: consolas;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    font-size: 24px;
+    color: green;
+    background-color: black;
+}
+#defaultHeader
+{
+    font-family: consolas;
+    font-size: 48px;
+}
+#defaultLink
+{
+    font-family: consolas;
+    font-size: 24px;
+    color: aqua;
+}
