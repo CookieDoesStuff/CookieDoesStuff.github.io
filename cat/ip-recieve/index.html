@@ -2,23 +2,13 @@
 	<title>ip thee shalt recieveth willest appeareth here</title>
 	<head>
 		<script>
-            let ips = "";
-            function checkCookies()
-            {
-                if (document.cookie != null)
-                {
-                    ip = document.cookie.ipsc;
-                }
-                else
-                {
-                    ip = "ip of ppl that u trolled epically: ";
-                }
-            }
+            let ips = "ip of ppl that u trolled epically: ";
+
             function refresh() 
             {
                 if (hasEnteredPasswordCorrectly == true)
                 {
-                    ips = localStorage.getItem("ips")
+                    ips = localStorage.getItem("ip");      
                     document.getElementById("ip").innerHTML = ips;
                 }
             }
