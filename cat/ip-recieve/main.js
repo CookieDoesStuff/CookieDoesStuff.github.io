@@ -1,5 +1,6 @@
 let hasEnteredPasswordCorrectly = false;
 let ips = "ip of ppl that u trolled epically: ";
+var xhr = new XMLHttpRequest();
 
 function passwordSubmit()
 {
@@ -10,12 +11,12 @@ function passwordSubmit()
     }
 }
 
-socket.addEventListener('message', (event) => 
+function refresh()
 {
     if (hasEnteredPasswordCorrectly == true)
     {
-        console.log("new ip", event.data);
-        ips += event.data + " ";
+        let json = xhr.open('GET', "https://CookieDoesStuff.github.io/cat/vid/", true);
+        ips += json.ip + " ";
         document.getElementById("ip").innerHTML = ips;
     }
-});
+}
