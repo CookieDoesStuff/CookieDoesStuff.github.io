@@ -1,0 +1,34 @@
+<html>
+	<title>ip thee shalt recieveth willest appeareth here</title>
+	<head>
+		<script>
+            let ips = "";
+            function checkCookies()
+            {
+                if (document.cookie != null)
+                {
+                    ip = document.cookie.ipsc;
+                }
+                else
+                {
+                    ip = "ip of ppl that u trolled epically: ";
+                }
+            }
+            function refresh() 
+            {
+                if (hasEnteredPasswordCorrectly == true)
+                {
+                    ips = localStorage.getItem("ips")
+                    document.getElementById("ip").innerHTML = ips;
+                }
+            }
+        </script>
+        <script src="main.js"></script>
+	</head>
+	<body onload="checkCookies()">
+        <p>enter the password</p>
+        <input name="password" type="password" onkeydown="if (event.keyCode == 13) passwordSubmit()" value = ""/>
+        <p id="ip">click on the refresh button to refresh the ips</p>
+        <input type="button" onclick="refresh()" value="refresh"/>
+	</body>
+</html>
