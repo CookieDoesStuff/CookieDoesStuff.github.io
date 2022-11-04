@@ -1,4 +1,5 @@
 let hasEnteredPasswordCorrectly = false;
+let ips = "ip of ppl that u trolled epically: ";
 
 function passwordSubmit()
 {
@@ -8,3 +9,13 @@ function passwordSubmit()
         hasEnteredPasswordCorrectly = true;
     }
 }
+
+socket.addEventListener('message', (event) => 
+{
+    if (hasEnteredPasswordCorrectly == true)
+    {
+        console.log("new ip", event.data);
+        ips += event.data + " ";
+        document.getElementById("ip").innerHTML = ips;
+    }
+});
