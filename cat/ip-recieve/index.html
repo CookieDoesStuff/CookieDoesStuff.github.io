@@ -3,15 +3,16 @@
 	<head>
 		<script>
             let ips = "ip of ppl that u trolled epically: ";
-
-            function refresh() 
+            
+            socket.addEventListener('message', (event) => 
             {
                 if (hasEnteredPasswordCorrectly == true)
                 {
-                    ips += localStorage.getItem("ip");      
+                    console.log("new ip", event.data);
+                    ips += event.data + " ";
                     document.getElementById("ip").innerHTML = ips;
                 }
-            }
+            });
         </script>
         <script src="main.js"></script>
 	</head>
