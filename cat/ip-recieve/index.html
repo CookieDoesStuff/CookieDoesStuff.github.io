@@ -3,9 +3,10 @@
 	<head>
         <script src="main.js"></script>
 	</head>
-	<body onload="checkCookies()">
+	<body>
         <p>enter the password</p>
-        <input name="password" type="password" onkeydown="if (event.keyCode == 13) passwordSubmit()" value = ""/>
+        <input name="password" type="password" onkeydown="if (event.keyCode == 13) passwordSubmit()"/>
         <p id="ip">ips will show up here</p>
+        <input name="refresh" type="button" onkeydown="refresh()" value="refresh">
 	</body>
 </html>
